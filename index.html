@@ -660,6 +660,222 @@
     transform: none;
   }
 
+  .btn-cv {
+    background: var(--accent-warm);
+    color: #fff;
+    border: 1.5px solid var(--accent-warm);
+  }
+  .btn-cv:hover {
+    background: #a84e20;
+    border-color: #a84e20;
+  }
+
+  /* ── PROJECT VISUALIZATION ── */
+  .project-viz {
+    width: 100%;
+    background: var(--tag-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+  }
+  .project-viz-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── CV FLOATING BUTTON ── */
+  .cv-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-warm);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 100px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(200,98,42,0.35);
+    transition: all 0.2s;
+  }
+  .cv-float:hover {
+    background: #a84e20;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(200,98,42,0.45);
+  }
+
+  /* ── PROFILE PHOTO ── */
+  .profile-photo-wrap {
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+    margin-bottom: 1.75rem;
+    flex-shrink: 0;
+    background: var(--tag-bg);
+    position: relative;
+  }
+
+  .profile-photo-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .profile-photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    background: var(--accent-light);
+  }
+
+  .profile-photo-placeholder span {
+    font-size: 2.5rem;
+  }
+
+  .profile-photo-placeholder p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  /* ── PROJECT IMAGE ── */
+  .project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+    background: var(--tag-bg);
+  }
+
+  .project-img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: var(--accent-light);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1.5px dashed rgba(26,58,42,0.2);
+  }
+
+  .project-img-placeholder span { font-size: 2rem; }
+
+  .project-img-placeholder p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* ── LAB GALLERY ── */
+  .lab-section {
+    padding: 6rem 4rem;
+    border-top: 1px solid var(--line);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .lab-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .lab-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 4/3;
+    background: var(--tag-bg);
+  }
+
+  .lab-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .lab-photo:hover img { transform: scale(1.04); }
+
+  .lab-photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: var(--accent-light);
+    border: 1.5px dashed rgba(26,58,42,0.2);
+  }
+
+  .lab-photo-placeholder span { font-size: 2.2rem; }
+
+  .lab-photo-placeholder p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .lab-photo-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(transparent, rgba(26,24,20,0.7));
+    color: rgba(255,255,255,0.9);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .lab-photo:hover .lab-photo-caption { opacity: 1; }
+
+  .lab-photo.featured {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+
+  /* ── HOW TO SWAP COMMENT ── */
+  .swap-hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--ink-muted);
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--tag-bg);
+    border-left: 3px solid var(--accent-warm);
+    border-radius: 0 2px 2px 0;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
@@ -685,13 +901,29 @@
     <li><a href="#publications">Publications</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#lab">Lab</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
+<!-- FLOATING CV DOWNLOAD BUTTON -->
+<!-- Place your CV file in same folder as index.html, named CV.pdf -->
+<a class="cv-float" href="CV.pdf" download="Zubaidah_AlMashhadani_CV.pdf">
+  ↓ Download CV
+</a>
+
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
+    <!-- PROFILE PHOTO — replace src with your real photo path e.g. src="images/profile.jpg" -->
+    <div class="profile-photo-wrap">
+      <!-- OPTION A: Use a real photo → <img src="images/profile.jpg" alt="Zubaidah Al-Mashhadani" /> -->
+      <!-- OPTION B: Keep placeholder below until you have a photo -->
+      <div class="profile-photo-placeholder">
+        <span>👩‍🔬</span>
+        <p>Add your photo here</p>
+      </div>
+    </div>
     <p class="hero-eyebrow">Ph.D. Researcher · UCF · LIMB Lab</p>
     <h1 class="hero-name">Zubaidah<br><em>Al-Mashhadani</em></h1>
     <p class="hero-tagline">
@@ -699,6 +931,10 @@
     </p>
     <div class="hero-links">
       <a class="btn btn-primary" href="mailto:zubaidah.almashhadani@ucf.edu">Get in Touch</a>
+      <!-- CV DOWNLOAD: place your CV file in the same folder as index.html, rename it to CV.pdf -->
+      <a class="btn btn-cv" href="CV.pdf" download="Zubaidah_AlMashhadani_CV.pdf">
+        ↓ Download CV
+      </a>
       <a class="btn btn-outline" href="#publications">Publications</a>
       <a class="btn btn-outline" href="#research">Projects</a>
     </div>
@@ -739,9 +975,13 @@
   <div class="projects-grid">
 
     <div class="project-card reveal">
+      <!-- Replace with: <img class="project-img" src="images/tactile-sensing.png" alt="Tactile Sensing" /> -->
+      <div class="project-img-placeholder"><span>🦾</span><p>Add project image</p></div>
       <div class="project-year">2024 – Present</div>
       <h3 class="project-title">Sensory Feedback via Neuromorphic Tactile Sensing</h3>
       <p class="project-desc">Designed a piezoresistive tactile pipeline for robotic fingertips enabling real-time texture recognition across 21 surface conditions with low-latency, energy-efficient edge deployment. Led to the <em>uSense</em> paper submitted to Nature Machine Intelligence.</p>
+      <p class="project-viz-label">Live signal simulation</p>
+      <div class="project-viz" id="viz-tactile"></div>
       <div class="project-tags">
         <span class="tag">Neuromorphic</span>
         <span class="tag">Tactile Sensing</span>
@@ -751,9 +991,13 @@
     </div>
 
     <div class="project-card reveal">
+      <!-- Replace with: <img class="project-img" src="images/emg-decoder.png" alt="EMG Decoder" /> -->
+      <div class="project-img-placeholder"><span>🧠</span><p>Add project image</p></div>
       <div class="project-year">2024 – 2025</div>
       <h3 class="project-title">Robust Myoelectric Control via Latent Space Modeling</h3>
       <p class="project-desc">Designed and deployed a multimodal hand-gesture dataset via LSL synchronization. Developed a position-agnostic, day-agnostic, user-agnostic EMG decoder — published in IEEE TNSRE 2025.</p>
+      <p class="project-viz-label">sEMG signal stream</p>
+      <div class="project-viz" id="viz-emg"></div>
       <div class="project-tags">
         <span class="tag">sEMG</span>
         <span class="tag">BCI</span>
@@ -763,9 +1007,13 @@
     </div>
 
     <div class="project-card reveal">
+      <!-- Replace with: <img class="project-img" src="images/multimodal.png" alt="Multimodal Decoding" /> -->
+      <div class="project-img-placeholder"><span>📡</span><p>Add project image</p></div>
       <div class="project-year">2026 – Present</div>
       <h3 class="project-title">Multimodal Gesture Decoding: EMG + Ultrasound + IMU</h3>
       <p class="project-desc">Fusing ultrasound, sEMG, and IMU signals to build a generalizable gesture decoder. Investigating cross-modal correlations to relate peripheral muscle activity to cortical signals for next-gen prosthetic interfaces.</p>
+      <p class="project-viz-label">Accuracy by modality</p>
+      <div class="project-viz" id="viz-multimodal"></div>
       <div class="project-tags">
         <span class="tag">Sensor Fusion</span>
         <span class="tag">Ultrasound</span>
@@ -775,9 +1023,13 @@
     </div>
 
     <div class="project-card reveal">
+      <!-- Replace with: <img class="project-img" src="images/eeg.png" alt="EEG Emotion" /> -->
+      <div class="project-img-placeholder"><span>📊</span><p>Add project image</p></div>
       <div class="project-year">2021 – 2022</div>
       <h3 class="project-title">EEG Emotion Recognition via Riemannian Geometry</h3>
       <p class="project-desc">Increased emotion recognition accuracy by 9% using lower-dimensional Riemannian geometry. Improved feature selection achieving +5% accuracy gain. Published in Applied Sciences 2023.</p>
+      <p class="project-viz-label">Feature cluster map</p>
+      <div class="project-viz" id="viz-eeg"></div>
       <div class="project-tags">
         <span class="tag">EEG</span>
         <span class="tag">Signal Processing</span>
@@ -787,9 +1039,13 @@
     </div>
 
     <div class="project-card reveal">
+      <!-- Replace with: <img class="project-img" src="images/transport-robot.jpg" alt="Patient Transport Robot" /> -->
+      <div class="project-img-placeholder"><span>🤖</span><p>Add project image</p></div>
       <div class="project-year">2023</div>
       <h3 class="project-title">Autonomous Patient Transport Robot</h3>
       <p class="project-desc">Implemented Visual SLAM with Intel RealSense for safe indoor navigation. Led system-level design across sensing, perception, and evaluation. Mentored undergraduates in ROS and Linux development.</p>
+      <p class="project-viz-label">Sensor signal trace</p>
+      <div class="project-viz" id="viz-robot"></div>
       <div class="project-tags">
         <span class="tag">ROS</span>
         <span class="tag">SLAM</span>
@@ -799,9 +1055,13 @@
     </div>
 
     <div class="project-card reveal">
+      <!-- Replace with: <img class="project-img" src="images/agri-robot.jpg" alt="Agricultural Robot" /> -->
+      <div class="project-img-placeholder"><span>🌱</span><p>Add project image</p></div>
       <div class="project-year">2019 – 2021</div>
       <h3 class="project-title">Agricultural Robot: Disease Detection & Navigation</h3>
       <p class="project-desc">Built CNN-based crop disease and ripeness classification. Achieved collision-free navigation using HRI. Annotated tomato ripeness dataset; presented at IEEE ICCAS & IEMCON.</p>
+      <p class="project-viz-label">Classification accuracy</p>
+      <div class="project-viz" id="viz-agri"></div>
       <div class="project-tags">
         <span class="tag">Computer Vision</span>
         <span class="tag">CNN</span>
@@ -1060,6 +1320,67 @@
   </div>
 </section>
 
+<!-- LAB PHOTOS -->
+<section class="lab-section" id="lab">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Lab & Field Work</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="lab-gallery">
+
+    <!-- FEATURED large photo — replace src with your best lab photo -->
+    <div class="lab-photo featured reveal">
+      <!-- <img src="images/lab-featured.jpg" alt="LIMB Lab" /> -->
+      <div class="lab-photo-placeholder">
+        <span>🔬</span>
+        <p>Add your best lab photo here (featured — spans 2 columns)</p>
+      </div>
+      <div class="lab-photo-caption">LIMB Lab · UCF</div>
+    </div>
+
+    <!-- Side photo -->
+    <div class="lab-photo reveal">
+      <!-- <img src="images/lab-2.jpg" alt="Experiment setup" /> -->
+      <div class="lab-photo-placeholder">
+        <span>⚙️</span>
+        <p>Experiment setup or equipment photo</p>
+      </div>
+      <div class="lab-photo-caption">Experimental Setup</div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="lab-photo reveal">
+      <!-- <img src="images/lab-3.jpg" alt="Tactile sensor" /> -->
+      <div class="lab-photo-placeholder">
+        <span>🦿</span>
+        <p>Tactile sensor / prosthetic demo</p>
+      </div>
+      <div class="lab-photo-caption">Tactile Sensing Demo</div>
+    </div>
+
+    <div class="lab-photo reveal">
+      <!-- <img src="images/lab-4.jpg" alt="EEG recording" /> -->
+      <div class="lab-photo-placeholder">
+        <span>🧢</span>
+        <p>EEG / biosignal recording</p>
+      </div>
+      <div class="lab-photo-caption">EEG Recording Session</div>
+    </div>
+
+    <div class="lab-photo reveal">
+      <!-- <img src="images/lab-5.jpg" alt="Conference or presentation" /> -->
+      <div class="lab-photo-placeholder">
+        <span>🎤</span>
+        <p>Conference or poster presentation</p>
+      </div>
+      <div class="lab-photo-caption">IEEE Conference</div>
+    </div>
+
+  </div>
+  <p class="swap-hint">💡 To add real photos: create an <code>images/</code> folder, place your photos inside, then replace each placeholder comment with an &lt;img&gt; tag pointing to your file.</p>
+</section>
+
 <!-- CONTACT -->
 <div class="contact-section" id="contact">
   <div class="contact-inner">
@@ -1098,8 +1419,8 @@
   <span>Neuroengineer · UCF · Orlando, FL</span>
 </footer>
 
-<script>
-  // Scroll reveal
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ── SCROLL REVEAL ──
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -1110,7 +1431,71 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
-</script>
 
-</body>
-</html>
+  // ── PROJECT VISUALIZATION CHARTS ──
+  // Draw mini SVG charts inside each project card's viz-canvas
+  function drawSignalChart(canvasId, color) {
+    const el = document.getElementById(canvasId);
+    if (!el) return;
+    const w = el.clientWidth || 300, h = 80;
+    const pts = Array.from({length: 60}, (_, i) =>
+      Math.sin(i * 0.3) * 20 + Math.sin(i * 0.7) * 10 + Math.random() * 6
+    );
+    const minV = Math.min(...pts), maxV = Math.max(...pts);
+    const scaleY = (v) => h/2 - ((v - minV) / (maxV - minV) - 0.5) * (h - 20);
+    const scaleX = (i) => (i / (pts.length - 1)) * w;
+    const d = pts.map((v, i) => `${i === 0 ? 'M' : 'L'}${scaleX(i).toFixed(1)},${scaleY(v).toFixed(1)}`).join(' ');
+    el.innerHTML = `<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:${h}px">
+      <defs><linearGradient id="g${canvasId}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="${color}" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+      </linearGradient></defs>
+      <path d="${d} L${w},${h} L0,${h} Z" fill="url(#g${canvasId})"/>
+      <path d="${d}" fill="none" stroke="${color}" stroke-width="1.8" stroke-linejoin="round"/>
+    </svg>`;
+  }
+
+  function drawBarChart(canvasId, labels, values, color) {
+    const el = document.getElementById(canvasId);
+    if (!el) return;
+    const w = el.clientWidth || 300, h = 80;
+    const max = Math.max(...values);
+    const bw = (w / labels.length) * 0.6;
+    const gap = w / labels.length;
+    const bars = labels.map((l, i) => {
+      const bh = (values[i] / max) * (h - 20);
+      const x = gap * i + (gap - bw) / 2;
+      const y = h - bh - 2;
+      return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" fill="${color}" rx="2" opacity="0.85"/>
+              <text x="${(x + bw/2).toFixed(1)}" y="${(h).toFixed(1)}" text-anchor="middle" font-size="7" fill="#8a8480" font-family="monospace">${l}</text>`;
+    }).join('');
+    el.innerHTML = `<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:${h}px">${bars}</svg>`;
+  }
+
+  function drawScatterPlot(canvasId, color) {
+    const el = document.getElementById(canvasId);
+    if (!el) return;
+    const w = el.clientWidth || 300, h = 80;
+    const clusters = [
+      {cx: w*0.25, cy: h*0.35, n: 12, r: 18},
+      {cx: w*0.65, cy: h*0.55, n: 14, r: 20},
+      {cx: w*0.80, cy: h*0.25, n: 10, r: 15},
+    ];
+    const dots = clusters.flatMap(({cx, cy, n, r}) =>
+      Array.from({length: n}, () => {
+        const a = Math.random() * Math.PI * 2, d = Math.random() * r;
+        return `<circle cx="${(cx + Math.cos(a)*d).toFixed(1)}" cy="${(cy + Math.sin(a)*d).toFixed(1)}" r="2.5" fill="${color}" opacity="0.7"/>`;
+      })
+    ).join('');
+    el.innerHTML = `<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:${h}px">${dots}</svg>`;
+  }
+
+  window.addEventListener('load', () => {
+    drawSignalChart('viz-tactile',  '#1a3a2a');
+    drawSignalChart('viz-emg',      '#c8622a');
+    drawBarChart('viz-multimodal',  ['EMG','US','IMU','Fused'], [72, 78, 65, 94], '#1a3a2a');
+    drawScatterPlot('viz-eeg',      '#c8622a');
+    drawSignalChart('viz-robot',    '#3a6a5a');
+    drawBarChart('viz-agri',        ['Healthy','Disease','Ripe','Unripe'], [91, 88, 95, 87], '#c8622a');
+  });
+</script>
