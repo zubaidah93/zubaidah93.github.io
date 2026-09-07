@@ -7,16 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --bg: #f5f3ef;
-    --ink: #1a1814;
-    --ink-soft: #4a4640;
-    --ink-muted: #8a8480;
-    --accent: #1a3a2a;
-    --accent-warm: #c8622a;
-    --accent-light: #e8f0eb;
-    --line: rgba(26,24,20,0.12);
+    --bg: #fff9fb;
+    --ink: #171317;
+    --ink-soft: #3f3840;
+    --ink-muted: #746a73;
+    --accent: #7a365d;
+    --accent-warm: #b85f83;
+    --accent-deep: #58233f;
+    --accent-light: #f8eaf0;
+    --line: rgba(88,35,63,0.14);
     --card-bg: #ffffff;
-    --tag-bg: #eceae5;
+    --tag-bg: #f6edf1;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -52,7 +53,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 4rem;
-    background: rgba(245,243,239,0.88);
+    background: rgba(255,249,251,0.9);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
   }
@@ -63,6 +64,20 @@
     letter-spacing: 0.02em;
     color: var(--ink);
     text-decoration: none;
+  }
+
+  .nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .ribbon-mark {
+    color: var(--accent-warm);
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    line-height: 1;
+    transform: translateY(-1px);
   }
 
   .nav-links {
@@ -154,7 +169,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 999px;
     transition: all 0.2s;
     cursor: pointer;
   }
@@ -177,9 +192,9 @@
   }
 
   .btn-outline:hover {
-    border-color: var(--ink);
-    background: var(--ink);
-    color: var(--bg);
+    border-color: var(--accent);
+    background: var(--accent-light);
+    color: var(--accent-deep);
   }
 
   .hero-right {
@@ -198,7 +213,7 @@
     transform: translate(-50%, -50%) rotate(-12deg);
     font-family: 'DM Serif Display', serif;
     font-size: clamp(8rem, 14vw, 16rem);
-    color: rgba(26,58,42,0.04);
+    color: rgba(122,54,93,0.055);
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
@@ -217,7 +232,7 @@
     background: var(--card-bg);
     border: 1px solid var(--line);
     padding: 1.5rem;
-    border-radius: 4px;
+    border-radius: 10px;
   }
 
   .stat-number {
@@ -241,7 +256,7 @@
     padding: 1.5rem;
     background: var(--accent);
     color: rgba(255,255,255,0.88);
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 0.9rem;
     line-height: 1.65;
     opacity: 0;
@@ -294,7 +309,7 @@
   .project-card {
     background: var(--card-bg);
     border: 1px solid var(--line);
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -318,7 +333,7 @@
   .project-card:hover::before { transform: scaleX(1); }
   .project-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(26,24,20,0.08);
+    box-shadow: 0 12px 40px rgba(88,35,63,0.10);
   }
 
   .project-year {
@@ -357,7 +372,7 @@
     background: var(--tag-bg);
     color: var(--ink-soft);
     padding: 0.25rem 0.6rem;
-    border-radius: 2px;
+    border-radius: 999px;
   }
 
   /* ── PUBLICATIONS ── */
@@ -421,7 +436,7 @@
     background: var(--card-bg);
     border: 1px solid var(--line);
     padding: 1.75rem;
-    border-radius: 4px;
+    border-radius: 10px;
   }
 
   .skill-group-title {
@@ -539,7 +554,7 @@
     padding: 1.25rem;
     background: var(--card-bg);
     border: 1px solid var(--line);
-    border-radius: 4px;
+    border-radius: 10px;
   }
 
   .award-icon {
@@ -666,8 +681,8 @@
     border: 1.5px solid var(--accent-warm);
   }
   .btn-cv:hover {
-    background: #a84e20;
-    border-color: #a84e20;
+    background: var(--accent-deep);
+    border-color: var(--accent-deep);
   }
 
   /* ── PROJECT VISUALIZATION ── */
@@ -705,13 +720,13 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 0 4px 20px rgba(200,98,42,0.35);
+    box-shadow: 0 4px 20px rgba(122,54,93,0.25);
     transition: all 0.2s;
   }
   .cv-float:hover {
-    background: #a84e20;
+    background: var(--accent-deep);
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(200,98,42,0.45);
+    box-shadow: 0 8px 28px rgba(122,54,93,0.34);
   }
 
   /* ── PROFILE PHOTO ── */
@@ -776,7 +791,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border: 1.5px dashed rgba(26,58,42,0.2);
+    border: 1.5px dashed rgba(122,54,93,0.22);
   }
 
   .project-img-placeholder span { font-size: 2rem; }
@@ -828,7 +843,7 @@
     justify-content: center;
     gap: 0.6rem;
     background: var(--accent-light);
-    border: 1.5px dashed rgba(26,58,42,0.2);
+    border: 1.5px dashed rgba(122,54,93,0.22);
   }
 
   .lab-photo-placeholder span { font-size: 2.2rem; }
@@ -888,6 +903,13 @@
     .contact-section { padding: 4rem 1.5rem; }
     footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .nav-links li:nth-child(n+4) { display: none; }
+  }
+
+  @media (max-width: 620px) {
+    .nav-links { display: none; }
+    .hero-links { gap: 0.6rem; }
+    .btn { padding: 0.65rem 1rem; }
   }
 </style>
 </head>
@@ -895,7 +917,10 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">Z. Al-Mashhadani</a>
+  <div class="nav-brand">
+    <a class="nav-logo" href="#">Z. Al-Mashhadani</a>
+    <span class="ribbon-mark" aria-hidden="true">୨୧</span>
+  </div>
   <ul class="nav-links">
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
@@ -919,7 +944,7 @@
     <div class="profile-photo-wrap">
       <img src="images/me.jpg" alt="Zubaidah Al-Mashhadani">
     </div>
-    <p class="hero-eyebrow">Ph.D. Researcher · UCF · LIMB Lab</p>
+    <p class="hero-eyebrow">Postdoctoral Fellow · UCF · LIMB &amp; Unary Labs</p>
     <h1 class="hero-name">Zubaidah<br><em>Al-Mashhadani</em></h1>
     <p class="hero-tagline">
       Bridging brain, body, and machine — I develop neuromorphic sensing systems and adaptive decoders for dexterous prosthetic and robotic control.
@@ -932,6 +957,8 @@
       </a>
       <a class="btn btn-outline" href="#publications">Publications</a>
       <a class="btn btn-outline" href="#research">Projects</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/zubaidaha/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a class="btn btn-outline" href="https://scholar.google.com/citations?user=_VA4w2UAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
     </div>
   </div>
   <div class="hero-right">
@@ -955,7 +982,7 @@
       </div>
     </div>
     <div class="hero-about">
-      Ph.D. candidate in Electrical Engineering at UCF's LIMB Lab. My research sits at the intersection of <strong>tactile sensing</strong>, <strong>neuromorphic computing</strong>, and <strong>machine learning</strong> — building real-time adaptive systems that let humans and robots share perception.
+      Postdoctoral Fellow in Electrical Engineering at UCF's LIMB and Unary Labs. My research sits at the intersection of <strong>tactile sensing</strong>, <strong>neuromorphic computing</strong>, and <strong>machine learning</strong>, building real-time adaptive systems that let humans and robots share perception.
     </div>
   </div>
 </div>
@@ -1389,7 +1416,7 @@
         <span>zubaidah.almashhadani@ucf.edu</span>
         <span class="contact-link-label">Email</span>
       </a>
-      <a class="contact-link" href="https://linkedin.com" target="_blank">
+      <a class="contact-link" href="https://www.linkedin.com/in/zubaidaha/" target="_blank" rel="noopener noreferrer">
         <span>in</span>
         <span>LinkedIn Profile</span>
         <span class="contact-link-label">LinkedIn</span>
@@ -1399,7 +1426,7 @@
         <span>GitHub</span>
         <span class="contact-link-label">Code</span>
       </a>
-      <a class="contact-link" href="https://scholar.google.com" target="_blank">
+      <a class="contact-link" href="https://scholar.google.com/citations?user=_VA4w2UAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">
         <span>◎</span>
         <span>Google Scholar</span>
         <span class="contact-link-label">Papers</span>
@@ -1486,11 +1513,11 @@
   }
 
   window.addEventListener('load', () => {
-    drawSignalChart('viz-tactile',  '#1a3a2a');
-    drawSignalChart('viz-emg',      '#c8622a');
-    drawBarChart('viz-multimodal',  ['EMG','US','IMU','Fused'], [72, 78, 65, 94], '#1a3a2a');
-    drawScatterPlot('viz-eeg',      '#c8622a');
-    drawSignalChart('viz-robot',    '#3a6a5a');
-    drawBarChart('viz-agri',        ['Healthy','Disease','Ripe','Unripe'], [91, 88, 95, 87], '#c8622a');
+    drawSignalChart('viz-tactile',  '#7a365d');
+    drawSignalChart('viz-emg',      '#b85f83');
+    drawBarChart('viz-multimodal',  ['EMG','US','IMU','Fused'], [72, 78, 65, 94], '#7a365d');
+    drawScatterPlot('viz-eeg',      '#b85f83');
+    drawSignalChart('viz-robot',    '#95506f');
+    drawBarChart('viz-agri',        ['Healthy','Disease','Ripe','Unripe'], [91, 88, 95, 87], '#b85f83');
   });
 </script>
